@@ -23,6 +23,10 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/01_catalogue_free_
 
 The notebook always loads the latest snapshot in `data/raw/`.
 
+## Daily snapshots
+
+`.github/workflows/daily-snapshot.yml` runs `fetch.py` every day at 06:17 UTC and commits the new snapshot to `data/raw/<date>/` (about 270 KB a day). To run it on demand, go to **Actions → Daily OpenRouter snapshot → Run workflow**. It needs no secrets. The notebook isn't re-run automatically; re-run it whenever you want updated charts.
+
 ## Endpoints used
 
 | Endpoint | Contents |
