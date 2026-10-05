@@ -34,7 +34,7 @@ The notebook always loads the latest snapshot in `data/raw/`.
 
 ## Caveats
 
-- Each snapshot records a single moment. Tracking price changes and how long free models last requires running `fetch.py` regularly. Raw snapshots are small, so they're committed.
+- Each snapshot records a single moment. The daily workflow builds the history needed to track price changes and how long free models last.
 - `latency_last_30m` and `throughput_last_30m` are blank in the public responses.
 - `created` is when a model was added to OpenRouter, not its original release date.
 - "Open weights" means the listing has a Hugging Face link, which is a proxy.
